@@ -16,7 +16,7 @@ public class ConfigLoader {
             while(file.hasNextLine()){
 
                 System.out.println(file.nextLine());
-                
+
             }
         } catch (FileNotFoundException e) {
 

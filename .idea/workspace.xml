@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5f4df57-9a4e-41e6-812d-83a1b9384aba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoveFuets/src/Bot.java" afterPath="$PROJECT_DIR$/LoveFuets/src/Bot.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/Bot.java" afterPath="$PROJECT_DIR$/main/src/Bot.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/cards/Baron.java" afterPath="$PROJECT_DIR$/main/src/cards/Baron.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/cards/Card.java" afterPath="$PROJECT_DIR$/main/src/cards/Card.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/cards/CardType.java" afterPath="$PROJECT_DIR$/main/src/cards/CardType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/cards/Countess.java" afterPath="$PROJECT_DIR$/main/src/cards/Countess.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/cards/Guard.java" afterPath="$PROJECT_DIR$/main/src/cards/Guard.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/cards/King.java" afterPath="$PROJECT_DIR$/main/src/cards/King.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/cards/Maid.java" afterPath="$PROJECT_DIR$/main/src/cards/Maid.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/cards/Priest.java" afterPath="$PROJECT_DIR$/main/src/cards/Priest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/cards/Prince.java" afterPath="$PROJECT_DIR$/main/src/cards/Prince.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/cards/Princess.java" afterPath="$PROJECT_DIR$/main/src/cards/Princess.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/config/ConfigLoader.java" afterPath="$PROJECT_DIR$/main/src/config/ConfigLoader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/LoveFuets/src/config/config.txt" afterPath="$PROJECT_DIR$/main/src/config/config.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoveFuets.iml" afterPath="$PROJECT_DIR$/LoveFuets.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LoveFuets.iws" />
@@ -26,7 +40,7 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="Bot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LoveFuets/src/Bot.java">
+        <entry file="file://$PROJECT_DIR$/main/src/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
@@ -35,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigLoader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LoveFuets/src/config/ConfigLoader.java">
+      <file leaf-file-name="ConfigLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/config/ConfigLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44813278">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,8 +61,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33802816">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="config.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LoveFuets/src/config/config.txt">
+        <entry file="file://$PROJECT_DIR$/main/src/config/config.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -82,6 +109,7 @@
         <option value="$PROJECT_DIR$/LoveFuets/src/config/config.txt" />
         <option value="$PROJECT_DIR$/LoveFuets/src/Bot.java" />
         <option value="$PROJECT_DIR$/LoveFuets/src/config/ConfigLoader.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -147,7 +175,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LoveFuets" />
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,15 +409,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LoveFuets/src/Bot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoveFuets/src/config/config.txt">
+    <entry file="file://$PROJECT_DIR$/main/src/config/config.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -393,14 +417,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LoveFuets/src/config/ConfigLoader.java">
+    <entry file="file://$PROJECT_DIR$/main/src/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44813278">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/config/ConfigLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33802816">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
