@@ -1,2 +1,5 @@
-.idea/*
+LoveFuets.iml
+out/
 *.iml
+.idea/workspace.xml
+.idea/libraries
