@@ -1,14 +1,21 @@
 package src;
 
+import src.config.ConfigLoader;
+
 public class Bot {
 
     public static void main(String[] args) {
 
-        if(args.length > 0 && args.length < 2){
 
-            String numPlayers = args[0];
-            System.out.println(numPlayers);
-            System.out.println("Prova");
+        ConfigLoader loader = new ConfigLoader();
+
+        try {
+
+            loader.readConfig();
+        } catch (Exception e) {
+
+            System.err.print(e);
         }
+        System.out.println("Prova");
     }
 }
