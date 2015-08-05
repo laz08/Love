@@ -1,6 +1,17 @@
 package src.cards;
 
+/**
+ * Guard card.
+ */
 public class Guard extends Card {
+
+    /**
+     * Constructor.
+     */
+    public Guard() {
+
+        mId = "Guard";
+    }
 
     @Override
     public CardType getType() {
@@ -8,9 +19,10 @@ public class Guard extends Card {
         return CardType.GUARD;
     }
 
-    public Guard(){
+    @Override
+    public void setDescription(String description) {
 
-        mId = "Guard";
-        mDescription = "Guard description";
+        mDescription = description;
     }
+
 }
