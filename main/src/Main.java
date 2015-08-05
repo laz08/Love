@@ -1,23 +1,27 @@
 package src;
 
+import src.api.ApiBot;
 import src.config.ConfigLoader;
 
 /**
- * IRC bot.
+ * Main program.
  */
-public class Bot {
+public class Main {
 
     public static void main(String[] args) {
-
 
         ConfigLoader loader = new ConfigLoader();
 
         try {
 
             loader.readConfig();
+            ApiBot bot = new ApiBot();
+
+            bot.startBot();
+
         } catch (Exception e) {
 
-            System.err.print(e);
+            System.err.print("Error while starting bot: " + e.getMessage());
         }
     }
 }

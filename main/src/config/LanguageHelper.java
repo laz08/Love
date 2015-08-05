@@ -34,7 +34,7 @@ public class LanguageHelper {
         switch (mLanguageId) {
             case SPANISH:
                 mTexts = new SpanishTexts();
-                System.out.println("Language set to English!");
+                System.out.println("Language set to Spanish!");
                 break;
 
             case ENGLISH:
