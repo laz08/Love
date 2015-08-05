@@ -7,7 +7,7 @@ public abstract class Card {
 
     String mId;
     String mDescription;
-    int value;
+    int mValue;
 
     public abstract CardType getType();
 

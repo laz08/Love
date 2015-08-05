@@ -12,5 +12,5 @@ public enum CardType {
     PRINCE,
     KING,
     COUNTESS,
-    PRINCESS
+    PRINCESS;
 }

@@ -2,6 +2,9 @@ package src;
 
 import src.config.ConfigLoader;
 
+/**
+ * IRC bot.
+ */
 public class Bot {
 
     public static void main(String[] args) {
@@ -16,6 +19,5 @@ public class Bot {
 
             System.err.print(e);
         }
-        System.out.println("Prova");
     }
 }

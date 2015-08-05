@@ -1,5 +1,8 @@
 package src.cards;
 
+/**
+ * Baron.
+ */
 public class Baron extends Card {
 
     @Override
