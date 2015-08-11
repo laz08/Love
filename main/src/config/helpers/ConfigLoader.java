@@ -70,7 +70,7 @@ public class ConfigLoader {
                 if (isLineValid(readLine)) {
 
                     stop = true;
-                    Settings.setAutoJoinChannel(readLine);
+                    Settings.setAutoJoinChannel("#" + readLine);
                     System.out.println(readLine);
                 }
             }
@@ -87,6 +87,11 @@ public class ConfigLoader {
                     System.out.println(readLine);
                 }
 
+            }
+
+            if(Settings.getUsername() == null || Settings.getUsername().isEmpty()){
+
+                Settings.setBotUsername("LoveLetterBot");
             }
 
         } catch (FileNotFoundException e) {

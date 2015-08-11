@@ -1,5 +1,6 @@
 package src;
 
+import src.api.ApiBot;
 import src.config.helpers.ConfigLoader;
 
 /**
@@ -15,12 +16,9 @@ public class Main {
 
             loader.readConfig();
 
-            /*
             ApiBot bot = new ApiBot();
-
             bot.startBot();
 
-            */
         } catch (Exception e) {
 
             System.err.print("Error while starting bot: " + e.getMessage());
