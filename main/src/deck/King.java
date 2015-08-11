@@ -1,22 +1,22 @@
-package src.cards;
+package src.deck;
 
 /**
- * Princess card.
+ * King card.
  */
-public class Princess extends Card {
+public class King extends Card {
 
     /**
      * Constructor.
      */
-    public Princess() {
+    public King() {
 
-        mId = "Princess";
+        mId = "King";
     }
 
     @Override
     public CardType getType() {
 
-        return CardType.PRINCESS;
+        return CardType.KING;
     }
 
     @Override

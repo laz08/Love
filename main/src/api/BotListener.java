@@ -20,6 +20,8 @@ public class BotListener extends ListenerAdapter {
 
     }
 
+    //TODO: Change messages so it gets them from LanguageHelper
+
     @Override
     public void onGenericMessage(GenericMessageEvent event) {
 
