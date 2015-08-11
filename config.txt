@@ -1,3 +1,0 @@
-spanish
-Config param2
-Config param3
