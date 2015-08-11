@@ -13,6 +13,7 @@ public class Player {
      */
     public Player() {
 
+        mVictories = 0;
     }
 
     /**
@@ -27,13 +28,30 @@ public class Player {
     }
 
     /**
+     * Increments one unit the player victories.
+     */
+    public void incrementVictories() {
+
+        mVictories++;
+    }
+
+    /**
+     * Gets player username.
+     *
+     * @return
+     */
+    public String getUsername() {
+
+        return mUsername;
+    }
+
+    /**
      * Sets player username.
      *
-     * @param username
+     * @param username Username.
      */
     public void setUsername(String username) {
 
         mUsername = username;
     }
-
 }
