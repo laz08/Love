@@ -1,5 +1,8 @@
 package src.config.languages;
 
+/**
+ * Language id.
+ */
 public enum LanguageId {
 
     SPANISH("spanish"),

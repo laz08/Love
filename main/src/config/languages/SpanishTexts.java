@@ -39,4 +39,10 @@ public class SpanishTexts extends LanguageTexts {
                 "Barón, pero ten cuidado, ya habrá un jugador que sabrá que la tienes y puede eliminarte usando al " +
                 "Guardia o al Príncipe.";
     }
+
+    @Override
+    public LanguageId getLanguageId() {
+
+        return LanguageId.SPANISH;
+    }
 }

@@ -1,5 +1,6 @@
-package src.config;
+package src.config.helpers;
 
+import src.config.Settings;
 import src.config.languages.EnglishTexts;
 import src.config.languages.LanguageId;
 import src.config.languages.LanguageTexts;
@@ -11,7 +12,6 @@ import src.config.languages.SpanishTexts;
 public class LanguageHelper {
 
     private LanguageTexts mTexts;
-    private LanguageId mLanguageId;
 
     /**
      * Constructor.
@@ -29,9 +29,11 @@ public class LanguageHelper {
 
         System.out.println("Setting language...");
 
-        mLanguageId = LanguageId.getLanguageId(id);
+        LanguageId language = LanguageId.getLanguageId(id);
+        Settings.setLanguage(language);
 
-        switch (mLanguageId) {
+        switch (language) {
+
             case SPANISH:
                 mTexts = new SpanishTexts();
                 System.out.println("Language set to Spanish!");

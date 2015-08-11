@@ -10,5 +10,12 @@ public class EnglishTexts extends LanguageTexts {
      */
     public EnglishTexts() {
 
+        //TODO Translate texts from SpanishTexts
+    }
+
+    @Override
+    public LanguageId getLanguageId() {
+
+        return LanguageId.ENGLISH;
     }
 }

@@ -1,0 +1,11 @@
+#Language: spanish or english
+spanish
+
+#Hostname
+chat.freenode.net
+
+#Channel. Without '#'
+prueba
+
+#Bot name (Optional. Default: LoveLetterBot)
+LoveLetterBot

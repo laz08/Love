@@ -1,6 +1,6 @@
 package src.config.languages;
 
-public class LanguageTexts {
+public abstract class LanguageTexts {
 
     public static String GUARD_DESCRIPTION;
     public static String PRIEST_DESCRIPTION;
@@ -10,5 +10,12 @@ public class LanguageTexts {
     public static String KING_DESCRIPTION;
     public static String COUNTESS_DESCRIPTION;
     public static String PRINCESS_DESCRIPTION;
+
+    /**
+     * Gets language id.
+     *
+     * @return Language id.
+     */
+    public abstract LanguageId getLanguageId();
 
 }

@@ -1,6 +1,7 @@
 package src.api;
 
 import org.pircbotx.*;
+import src.config.Settings;
 
 /**
  * IRC bot.
@@ -13,10 +14,10 @@ public class ApiBot {
     public ApiBot() {
 
         mConfiguration = new Configuration.Builder()
-                .setName("BotDePruebas")
+                .setName(Settings.getUsername())
                 .setAutoNickChange(true)
-                .setServerHostname("")
-                .addAutoJoinChannel("")
+                .setServerHostname(Settings.getHostname())
+                .addAutoJoinChannel(Settings.getAutoJoinChannel())
                 .addListener(new BotListener())
                 .buildConfiguration();
 
