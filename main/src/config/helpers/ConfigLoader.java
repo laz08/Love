@@ -29,7 +29,7 @@ public class ConfigLoader {
      */
     public void readConfig() throws FileNotFoundException {
 
-        //TODO: Beautify this.
+        //TODO: Beautify this. Really. It sucks.
         try {
 
             Scanner file = new Scanner(new File("config.txt"));
@@ -37,38 +37,55 @@ public class ConfigLoader {
             String readLine;
 
             //Language
-            if (file.hasNextLine()) {
-                readLine = file.nextLine();
-                if(!readLine.startsWith("#") && !readLine.isEmpty()){
+            boolean stop = false;
+            while (file.hasNextLine() && !stop) {
 
+                readLine = file.nextLine();
+                if (isLineValid(readLine)) {
+
+                    stop = true;
                     System.out.println(readLine);
                     mLanguageHelper.setLanguage(readLine);
                 }
             }
 
+            stop = false;
             //Hostname
-            if (file.hasNextLine()) {
+            while (file.hasNextLine() && !stop) {
 
                 readLine = file.nextLine();
-                Settings.setHostname(readLine);
-                System.out.println(readLine);
+                if (isLineValid(readLine)) {
+
+                    stop = true;
+                    Settings.setHostname(readLine);
+                    System.out.println(readLine);
+                }
             }
 
+            stop = false;
             //Channel
-            if (file.hasNextLine()) {
+            while (file.hasNextLine() && !stop) {
 
                 readLine = file.nextLine();
-                Settings.setAutoJoinChannel(readLine);
-                System.out.println(readLine);
+                if (isLineValid(readLine)) {
 
+                    stop = true;
+                    Settings.setAutoJoinChannel(readLine);
+                    System.out.println(readLine);
+                }
             }
 
+            stop = false;
             //Bot name
-            if (file.hasNextLine()) {
+            while (file.hasNextLine() && !stop) {
 
                 readLine = file.nextLine();
-                Settings.setBotUsername(readLine);
-                System.out.println(readLine);
+                if (isLineValid(readLine)) {
+
+                    stop = true;
+                    Settings.setBotUsername(readLine);
+                    System.out.println(readLine);
+                }
 
             }
 
@@ -78,5 +95,29 @@ public class ConfigLoader {
 
         }
 
+    }
+
+    /**
+     * Determines if line is valid.
+     *
+     * @param line Line.
+     * @return Returns true if line is valid, false otherwise.
+     */
+    private boolean isLineValid(String line) {
+
+        return !line.startsWith("#") && !isLineEmpty(line);
+    }
+
+    /**
+     * Determines if line is empty.
+     *
+     * @param line Line.
+     * @return True if line is empty, false otherwise.
+     */
+    private boolean isLineEmpty(String line) {
+
+        //boolean empty = line.isEmpty() || line.trim().equals("") || line.trim().equals("\n");
+        //System.out.println("Line with content: '" + line + "' is empty: " + empty);
+        return line.isEmpty() || line.trim().equals("") || line.trim().equals("\n");
     }
 }
