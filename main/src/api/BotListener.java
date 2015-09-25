@@ -49,22 +49,27 @@ public class BotListener extends ListenerAdapter {
 
         String message = event.getMessage();
         boolean isCommand = false;
+        String channel = Settings.getAutoJoinChannel();
+        String nickname = event.getUser().getNick();
         switch (message) {
 
             case HELP_COMMAND:
 
                 isCommand = true;
-                event.respond("Te mando las instrucciones por privado, " + event.getUser().getNick());
+                event.respond("Te mando las instrucciones por privado, " + nickname);
                 break;
 
             case JOIN_COMMAND:
 
                 isCommand = true;
-                String nick = event.getUser().getNick();
-                mGame.addPlayer(new Player(nick));
-                event.respond("Jugador " + nick + " añadido a la partida.");
+                addPlayer(nickname, channel);
                 break;
 
+            case LEAVE_COMMAND:
+
+                isCommand = true;
+                removePlayer(nickname, channel);
+                break;
             case PLAYERS_LIST_COMMAND:
 
                 isCommand = true;
@@ -81,6 +86,37 @@ public class BotListener extends ListenerAdapter {
 
         }
     }
+
+    /**
+     * Adds player to current game.
+     *
+     * @param nick    User nickname.
+     * @param channel Channel.
+     */
+    private void addPlayer(String nick, String channel) {
+
+        mGame.addPlayer(new Player(nick));
+        mBot.sendMessageToChannel("Jugador " + nick + " añadido a la partida.", channel);
+    }
+
+    /**
+     * Removes player from current game.
+     *
+     * @param nick    User nickname.
+     * @param channel Channel.
+     */
+    private void removePlayer(String nick, String channel) {
+
+        try {
+
+            mGame.removePlayer(nick);
+            mBot.sendMessageToChannel("Jugador " + nick + " borrado de la partida.", channel);
+        } catch (Exception e) {
+
+            mBot.sendMessageToChannel(e.getMessage(), channel);
+        }
+    }
+
 
     /**
      * Sends player list.
@@ -162,5 +198,6 @@ public class BotListener extends ListenerAdapter {
 
     public static final String HELP_COMMAND = "!help";
     public static final String JOIN_COMMAND = "!join";
+    public static final String LEAVE_COMMAND = "!leave";
     public static final String PLAYERS_LIST_COMMAND = "!list";
 }
