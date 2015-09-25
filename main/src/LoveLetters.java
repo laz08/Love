@@ -4,11 +4,26 @@ import src.api.ApiBot;
 import src.config.helpers.ConfigLoader;
 
 /**
- * Main program.
+ * Loveletters main program.
  */
-public class Main {
+public class LoveLetters {
 
     public static void main(String[] args) {
+
+        initialize();
+        loadConfiguration();
+
+    }
+
+
+    private static void initialize() {
+
+    }
+
+    /**
+     * Loads game configuration.
+     */
+    private static void loadConfiguration() {
 
         ConfigLoader loader = new ConfigLoader();
 

@@ -2,6 +2,7 @@ package src.api;
 
 import org.pircbotx.*;
 import src.Game;
+import src.LoveLetters;
 import src.config.Settings;
 
 /**
@@ -9,23 +10,26 @@ import src.config.Settings;
  */
 public class ApiBot {
 
-    private PircBotX mBot;
-    private Configuration<PircBotX> mConfiguration;
+    private LoveLettersBot mBot;
+
     private Game mGame;
+    private BotListener mListener;
 
     public ApiBot() {
 
         mGame = new Game();
 
-        mConfiguration = new Configuration.Builder()
+        mListener= new BotListener(mGame);
+        Configuration<PircBotX> configuration = new Configuration.Builder()
                 .setName(Settings.getUsername())
                 .setAutoNickChange(true)
                 .setServerHostname(Settings.getHostname())
                 .addAutoJoinChannel(Settings.getAutoJoinChannel())
-                .addListener(new BotListener(mGame))
+                .addListener(mListener)
                 .buildConfiguration();
 
-        mBot = new PircBotX(mConfiguration);
+        mBot = new LoveLettersBot(configuration);
+        mListener.setBot(mBot);
     }
 
     /**

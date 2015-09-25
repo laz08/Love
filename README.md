@@ -10,7 +10,7 @@ Configure it to your liking, specifying (in order):
 * __Language__: For now, only spanish and english are supported.
 Write *spanish* or *english*.
 * __Hostname__ 
-* __Channel__ to autojoin when connecting to hostname. Do not write *#* character.
+* __Channel__ to autojoin when connecting to hostname. __Do not write *#* character.__
 * __Bot name__: Optional. If not specified, its name will be "LoveLetterBot".
 
 

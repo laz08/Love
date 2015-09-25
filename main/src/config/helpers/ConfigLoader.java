@@ -32,7 +32,7 @@ public class ConfigLoader {
         //TODO: Beautify this. Really. It sucks.
         try {
 
-            Scanner file = new Scanner(new File("config.txt"));
+            Scanner file = new Scanner(new File(CONFIG_FILE_NAME));
 
             String readLine;
 
@@ -89,7 +89,7 @@ public class ConfigLoader {
 
             }
 
-            if(Settings.getUsername() == null || Settings.getUsername().isEmpty()){
+            if (Settings.getUsername() == null || Settings.getUsername().isEmpty()) {
 
                 Settings.setBotUsername("LoveLetterBot");
             }
@@ -121,8 +121,8 @@ public class ConfigLoader {
      */
     private boolean isLineEmpty(String line) {
 
-        //boolean empty = line.isEmpty() || line.trim().equals("") || line.trim().equals("\n");
-        //System.out.println("Line with content: '" + line + "' is empty: " + empty);
         return line.isEmpty() || line.trim().equals("") || line.trim().equals("\n");
     }
+
+    public static final String CONFIG_FILE_NAME = "config.txt";
 }
