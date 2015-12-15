@@ -1,5 +1,9 @@
 package src;
 
+import src.deck.Card;
+
+import java.util.ArrayList;
+
 /**
  * Player.
  */
@@ -7,12 +11,14 @@ public class Player {
 
     public String mUsername;
     public int mVictories;
+    public ArrayList<Card> mano;
 
     /**
      * Constructor.
      */
     public Player() {
 
+        mano = new ArrayList<>();
         mVictories = 0;
     }
 
@@ -53,5 +59,33 @@ public class Player {
     public void setUsername(String username) {
 
         mUsername = username;
+    }
+
+
+    /*
+     * Return the cards of the player
+     */
+    public ArrayList<Card> getMano() {
+
+        return mano;
+    }
+
+    public void addCard(Card card) {
+
+        mano.add(card);
+    }
+
+    public boolean removeCard(String card) {
+
+        //TODO: dicotomic search if the number of cards grow
+        int it = 0;
+        boolean finded = false;
+        while (it < mano.size() && !finded) {
+            if(card.equals(mano.get(it))) {
+                mano.remove(it);
+                finded = true;
+            }
+        }
+        return finded;
     }
 }

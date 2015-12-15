@@ -63,17 +63,41 @@ public class BotListener extends ListenerAdapter {
 
                 isCommand = true;
                 addPlayer(nickname, channel);
+                event.respond("El jugador " + nickname + " se ha unido a la partida");
                 break;
 
             case LEAVE_COMMAND:
 
                 isCommand = true;
                 removePlayer(nickname, channel);
+                event.respond("El jugador " + nickname + " ha dejado la partida");
                 break;
             case PLAYERS_LIST_COMMAND:
 
                 isCommand = true;
                 sendPlayersList();
+                break;
+
+            case PLAY_COMMAND:
+
+                isCommand = true;
+                event.respond("Que empiece el juego!");
+                startPlay();
+                break;
+
+            case NEXT_TURN_COMMAND:
+
+                isCommand = true;
+                nextTurn();
+                break;
+
+            case DRAW_CARD_COMMAND:
+
+                isCommand = true;
+                //WARNING: No se com conseguir el missatge per extreure  el
+                //nom de la carta
+                String card = null;
+                drawCard(nickname, card);
                 break;
         }
 
@@ -196,8 +220,36 @@ public class BotListener extends ListenerAdapter {
         }
     }
 
+    /**
+     * Initialize the game and start it
+     */
+    private void startPlay() {
+        mGame.startGame();
+    }
+
+    /**
+     * End the current turn and start next turn
+     */
+    private void nextTurn() {
+
+    }
+
+    /**
+     *
+     * @param sourcePlayer Player that draw the card
+     * @param cardPlayed Card that is played
+     */
+    private void drawCard(Player sourcePlayer, String cardPlayed, Player targetPlayer) {
+
+        mGame.playCard(sourcePlayer, cardPlayed, targetPlayer);
+
+    }
+
     public static final String HELP_COMMAND = "!help";
     public static final String JOIN_COMMAND = "!join";
     public static final String LEAVE_COMMAND = "!leave";
     public static final String PLAYERS_LIST_COMMAND = "!list";
+    public static final String PLAY_COMMAND = "!play";
+    public static final String NEXT_TURN_COMMAND = "!nextTurn";
+    public static final String DRAW_CARD_COMMAND = "!drawCard";
 }
