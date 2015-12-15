@@ -124,6 +124,10 @@ public class Game {
         }
     }
 
+    /**
+    * Change turn function
+    *
+    */
     public void nextTurn() {
 
         //Every player gets a new card
@@ -133,6 +137,12 @@ public class Game {
         }
     }
 
+
+    /**
+    * Play Card function
+    *
+    *@param Player sourcePlayer, String cardPlayed, Player targetPlayer
+    */
     public void playCard(Player sourcePlayer, String cardPlayed, Player targetPlayer) {
 
         //Is it this player's turn?
@@ -175,11 +185,39 @@ public class Game {
                 //A valid target is someone who is in the game, not already eliminated
                 //and did not play the Handmaid on their last turn
                 //Target can only be current player if they are playing the prince.
+                ArrayList<String> AttackCard = new ArrayList<String>(	//attack card name
+                    Arrays.asList("Baron", "Priest", "Guard", "Prince",
+                            "King"));
+                CardType cardPlayedType;
+       			cardPlayedType = cardPlayed.getType();
+                if(cardPlayedType == CardType.Baron || cardPlayedType == CardType.Prince ||
+                	cardPlayedType == CardType.Guard || cardPlayedType == CardType.Prince ||
+                	cardPlayedType == CardType.King) {
+                	//Card needs a targetPlayer
+                	if(targetPlayer == null) {
+                		//Error
+                	}
+                	else if(droppedPlayers.contains(targetPlayer)) {
+                		//Player out of the round, invalid target
+                	}
+                	else if(targetPlayer == sourcePlayer) {
+                		//Error targetPlayer != source player
+                	}
+                	//else if() {
+                		//Comprove that targetPlayer is not with the maid protection
+                	//}
+
+                	
+                }
 
             }
         }
     }
-
+    /**
+    *get Card cardName
+    *
+    *@param String cardName
+    */
     private Card getCard(String cardName) {
         Card returnCard;
         switch (cardName) {
