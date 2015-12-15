@@ -62,19 +62,31 @@ public class Player {
     }
 
 
-    /*
+    /**
      * Return the cards of the player
+	 *
+	 * @return ArrayList<Card> mano
      */
     public ArrayList<Card> getMano() {
 
         return mano;
     }
 
+    /**
+    * Add card to mano 
+    *
+    *@param Added card
+    */
     public void addCard(Card card) {
 
         mano.add(card);
     }
 
+    /**
+    * Remove card to mano
+    *
+    *@param Deleted card
+    */
     public boolean removeCard(String card) {
 
         //TODO: dicotomic search if the number of cards grow
